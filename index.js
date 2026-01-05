@@ -45,10 +45,13 @@ app.get('/evening', (req, res) => {
 /**
  * Start the HTTP server
  * Binds to the configured PORT and logs startup confirmation
+ * Only starts when run directly (not when imported for testing)
  */
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+if (require.main === module) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
 
-// Export the Express app instance for potential testing or extension
+// Export the Express app instance for testing and extension
 module.exports = app;
