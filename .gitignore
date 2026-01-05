@@ -1,0 +1,38 @@
+# Node.js Express Tutorial Server - Git Ignore File
+# ================================================
+
+# Dependencies
+# npm packages installed via `npm install` - these are auto-generated
+# and should be installed fresh on each machine using package-lock.json
+node_modules/
+
+# Log files
+# Runtime logs and npm debug logs
+*.log
+
+# Environment files
+# Contains sensitive configuration like API keys and secrets
+# Never commit these to version control
+.env
+.env.local
+.env.*.local
+
+# OS-specific files
+# macOS Finder metadata file
+.DS_Store
+
+# Windows thumbnail cache
+Thumbs.db
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Optional: Test coverage output
+coverage/
+
+# Optional: Build artifacts
+dist/
+build/
